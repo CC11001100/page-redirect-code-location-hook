@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对onbeforeunload进行了多次赋值的例子</title>
+</head>
+<body>
+
+<h1>这个页面用于测试对onbeforeunload进行了多次赋值的例子，请打开开发者工具然后关闭页面</h1>
+
+<script>
+
+    // 直接赋值的形式，测试通过
+    window.onbeforeunload = function (event) {
+        debugger;
+    }
+
+    // 以添加事件监听器的形式，测试通过
+    window.addEventListener("beforeunload", function (event) {
+        debugger;
+    });
+
+</script>
+</body>
+</html>
